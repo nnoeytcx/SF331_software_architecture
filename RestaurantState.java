@@ -452,8 +452,12 @@ class RestaurantState
         // restaurant.serveProduct();
         // System.out.println(restaurant);
         restaurant.orderFoodDrink("SeafoodPizza");
+        restaurant.orderFoodDrink("HawaiianPizza");
+        restaurant.orderFoodDrink("SomePizza");
         // restaurant.getProduct();
         // restaurant.serveProduct();
+        System.out.println(restaurant);
+
 
 	}
 }
