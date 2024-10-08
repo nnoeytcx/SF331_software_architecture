@@ -1,8 +1,4 @@
-
 import java.text.DecimalFormat;
-
-import javax.print.DocFlavor;
-
 
 public class PizzaTestDrive {
 
