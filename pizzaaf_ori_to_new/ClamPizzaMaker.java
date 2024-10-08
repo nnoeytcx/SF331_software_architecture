@@ -1,8 +1,8 @@
 
-public class ClamPizza extends Pizza {
+public class ClamPizzaMaker {
 	PizzaIngredientFactory ingredientFactory;
 
-	public ClamPizza(PizzaIngredientFactory ingredientFactory) {
+	public ClamPizzaMaker(PizzaIngredientFactory ingredientFactory) {
 		this.ingredientFactory = ingredientFactory;
 	}
  
@@ -15,8 +15,4 @@ public class ClamPizza extends Pizza {
 		return (pizza);
 	}
 
-
-	public double cost() {
-		return this.cost();
-	}
 }
