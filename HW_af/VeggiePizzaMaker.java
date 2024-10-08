@@ -1,8 +1,8 @@
 
-public class VeggiePizza extends Pizza {
+public class VeggiePizzaMaker {
 	PizzaIngredientFactory ingredientFactory;
 
-	public VeggiePizza(PizzaIngredientFactory ingredientFactory) {
+	public VeggiePizzaMaker(PizzaIngredientFactory ingredientFactory) {
 		this.ingredientFactory = ingredientFactory;
 	}
  
@@ -15,8 +15,4 @@ public class VeggiePizza extends Pizza {
 		return (pizza);
 	}
 
-
-	public double cost() {
-		return this.cost();
-	}
 }
