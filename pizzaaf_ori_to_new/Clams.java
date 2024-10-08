@@ -1,5 +1,7 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public interface Clams {
-	public String toString();
+public abstract class Clams extends Pizza {
+	Pizza pizza;
+	public abstract String getDescription();
+
+
 }

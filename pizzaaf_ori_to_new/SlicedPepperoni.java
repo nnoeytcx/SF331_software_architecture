@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class SlicedPepperoni implements Pepperoni {
+public class SlicedPepperoni extends Pepperoni {
 
-	public String toString() {
-		return "Sliced Pepperoni";
+	public SlicedPepperoni(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Sliced Pepperoni";
+	}
+ 
+	public double cost() {
+		return 0.4 + pizza.cost(); 
 	}
 }

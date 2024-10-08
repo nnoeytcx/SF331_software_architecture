@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class ReggianoCheese implements Cheese {
+public class ReggianoCheese extends Cheese {
 
-	public String toString() {
-		return "Reggiano Cheese";
+	public ReggianoCheese(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Reggiano Cheese";
+	}
+ 
+	public double cost() {
+		return 0.9 + pizza.cost(); 
 	}
 }

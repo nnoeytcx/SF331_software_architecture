@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class BlackOlives implements Veggies {
+public class BlackOlives extends Veggies {
 
-	public String toString() {
-		return "Black Olives";
+	public BlackOlives(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Black Olives";
+	}
+ 
+	public double cost() {
+		return 0.1 + pizza.cost(); 
 	}
 }

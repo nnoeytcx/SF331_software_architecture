@@ -1,17 +1,22 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
 public class ClamPizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;
- 
+
 	public ClamPizza(PizzaIngredientFactory ingredientFactory) {
 		this.ingredientFactory = ingredientFactory;
 	}
  
-	void prepare() {
-		System.out.println("Preparing " + name);
-		dough = ingredientFactory.createDough();
-		sauce = ingredientFactory.createSauce();
-		cheese = ingredientFactory.createCheese();
-		clam = ingredientFactory.createClam();
+	Pizza make(Pizza pizza)
+	{
+		pizza = ingredientFactory.getDough();
+		pizza = ingredientFactory.getSauce(pizza);
+		pizza = ingredientFactory.getCheese(pizza);
+		pizza = ingredientFactory.getClam(pizza);
+		return (pizza);
+	}
+
+
+	public double cost() {
+		return this.cost();
 	}
 }

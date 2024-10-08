@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class Mushroom implements Veggies {
+public class Mushroom extends Veggies {
 
-	public String toString() {
-		return "Mushrooms";
+	public Mushroom(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Mushrooms";
+	}
+ 
+	public double cost() {
+		return 0.25 + pizza.cost(); 
 	}
 }

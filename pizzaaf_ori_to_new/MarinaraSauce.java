@@ -1,7 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class MarinaraSauce implements Sauce {
-	public String toString() {
-		return "Marinara Sauce";
+public class MarinaraSauce extends Sauce {
+
+	public MarinaraSauce(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Marinara Sauce";
+	}
+ 
+	public double cost() {
+		return 0.3 + pizza.cost(); 
 	}
 }

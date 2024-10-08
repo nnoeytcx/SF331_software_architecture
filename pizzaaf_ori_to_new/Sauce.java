@@ -1,5 +1,6 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public interface Sauce {
-	public String toString();
+public abstract class Sauce extends Pizza {
+	Pizza pizza;
+	public abstract String getDescription();
+
 }

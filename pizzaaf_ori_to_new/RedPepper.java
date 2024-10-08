@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class RedPepper implements Veggies {
+public class RedPepper extends Veggies {
 
-	public String toString() {
-		return "Red Pepper";
+	public RedPepper(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Red pepper";
+	}
+ 
+	public double cost() {
+		return 0.8 + pizza.cost(); 
 	}
 }

@@ -1,17 +1,22 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
 public class VeggiePizza extends Pizza {
 	PizzaIngredientFactory ingredientFactory;
- 
+
 	public VeggiePizza(PizzaIngredientFactory ingredientFactory) {
 		this.ingredientFactory = ingredientFactory;
 	}
  
-	void prepare() {
-		System.out.println("Preparing " + name);
-		dough = ingredientFactory.createDough();
-		sauce = ingredientFactory.createSauce();
-		cheese = ingredientFactory.createCheese();
-		veggies = ingredientFactory.createVeggies();
+	Pizza make(Pizza pizza)
+	{
+		pizza = ingredientFactory.getDough();
+		pizza = ingredientFactory.getSauce(pizza);
+		pizza = ingredientFactory.getCheese(pizza);
+		pizza = ingredientFactory.getVeggies(pizza);
+		return (pizza);
+	}
+
+
+	public double cost() {
+		return this.cost();
 	}
 }

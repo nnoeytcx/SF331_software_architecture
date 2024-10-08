@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class Onion implements Veggies {
+public class Onion extends Veggies {
 
-	public String toString() {
-		return "Onion";
+	public Onion(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Onion";
+	}
+ 
+	public double cost() {
+		return 0.1 + pizza.cost(); 
 	}
 }

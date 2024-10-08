@@ -1,7 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class PlumTomatoSauce implements Sauce {
-	public String toString() {
-		return "Tomato sauce with plum tomatoes";
+public class PlumTomatoSauce extends Sauce {
+	
+	public PlumTomatoSauce(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Tomato sauce with plum tomatoes";
+	}
+ 
+	public double cost() {
+		return 0.2 + pizza.cost(); 
 	}
 }

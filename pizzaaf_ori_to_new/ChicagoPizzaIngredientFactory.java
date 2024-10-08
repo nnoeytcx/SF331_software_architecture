@@ -1,33 +1,37 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class ChicagoPizzaIngredientFactory 
-	implements PizzaIngredientFactory 
+public class ChicagoPizzaIngredientFactory extends PizzaIngredientFactory 
 {
 
-	public Dough createDough() {
-		return new ThickCrustDough();
+	public Pizza getDough(){
+		Pizza pizza = new ThickcrustPizza();
+		return pizza;
 	}
 
-	public Sauce createSauce() {
-		return new PlumTomatoSauce();
+	public Pizza getSauce(Pizza pizza)
+	{
+		pizza = new PlumTomatoSauce(pizza);
+		return pizza;
 	}
-
-	public Cheese createCheese() {
-		return new MozzarellaCheese();
+	public Pizza getCheese(Pizza pizza)
+	{
+		pizza = new MozzarellaCheese(pizza);
+		return pizza;
 	}
-
-	public Veggies[] createVeggies() {
-		Veggies veggies[] = { new BlackOlives(), 
-		                      new Spinach(), 
-		                      new Eggplant() };
-		return veggies;
+	public Pizza getVeggies(Pizza pizza)
+	{
+		pizza = new BlackOlives(pizza);
+		pizza = new Spinach(pizza);
+		pizza = new Eggplant(pizza);
+		return pizza;
 	}
-
-	public Pepperoni createPepperoni() {
-		return new SlicedPepperoni();
+	public Pizza getPepperoni(Pizza pizza)
+	{
+		pizza = new SlicedPepperoni(pizza);
+		return pizza;
 	}
-
-	public Clams createClam() {
-		return new FrozenClams();
+	public Pizza getClam(Pizza pizza)
+	{
+		pizza = new FrozenClams(pizza);
+		return pizza;
 	}
 }

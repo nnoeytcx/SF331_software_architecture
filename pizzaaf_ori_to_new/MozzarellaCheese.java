@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class MozzarellaCheese implements Cheese {
+public class MozzarellaCheese extends Cheese {
 
-	public String toString() {
-		return "Shredded Mozzarella";
+	public MozzarellaCheese(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Shredded Mozzarella";
+	}
+ 
+	public double cost() {
+		return 0.5 + pizza.cost(); 
 	}
 }

@@ -1,4 +1,3 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
 public class NYPizzaStore extends PizzaStore {
  
@@ -9,22 +8,23 @@ public class NYPizzaStore extends PizzaStore {
  
 		if (item.equals("cheese")) {
   
-			pizza = new CheesePizza(ingredientFactory);
+			CheesePizza cheesePizza = new CheesePizza(ingredientFactory);
+			pizza = cheesePizza.make(pizza);
 			pizza.setName("New York Style Cheese Pizza");
   
 		} else if (item.equals("veggie")) {
- 
-			pizza = new VeggiePizza(ingredientFactory);
+			VeggiePizza veggiepizza = new VeggiePizza(ingredientFactory);
+			pizza = veggiepizza.make(pizza);
 			pizza.setName("New York Style Veggie Pizza");
  
 		} else if (item.equals("clam")) {
- 
-			pizza = new ClamPizza(ingredientFactory);
+			ClamPizza clampizza = new ClamPizza(ingredientFactory);
+			pizza = clampizza.make(pizza);
 			pizza.setName("New York Style Clam Pizza");
  
 		} else if (item.equals("pepperoni")) {
-
-			pizza = new PepperoniPizza(ingredientFactory);
+			PepperoniPizza pepperonipizza = new PepperoniPizza(ingredientFactory);
+			pizza = pepperonipizza.make(pizza);
 			pizza.setName("New York Style Pepperoni Pizza");
  
 		} 

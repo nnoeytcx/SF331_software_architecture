@@ -1,8 +1,15 @@
-package headfirst.designpatterns.factory.pizzaaf;
 
-public class Garlic implements Veggies {
+public class Garlic extends Veggies {
 
-	public String toString() {
-		return "Garlic";
+	public Garlic(Pizza pizza) {
+		this.pizza = pizza;
+	}
+ 
+	public String getDescription() {
+		return pizza.getDescription() + ", Garlic";
+	}
+ 
+	public double cost() {
+		return 0.1 + pizza.cost(); 
 	}
 }
